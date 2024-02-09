@@ -38,6 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 626096397
+    locked: 0
+  - name: Ground
+    uniqueID: 457637555
+    locked: 0
+  - name: DynamicWall
+    uniqueID: 125137651
+    locked: 0
+  - name: WallDecorations
+    uniqueID: 952058285
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: VFX
+    uniqueID: 3171559489
+    locked: 0
+  - name: AbovePlayerWall
+    uniqueID: 2547918069
+    locked: 0
+  - name: UI
+    uniqueID: 762375275
     locked: 0
