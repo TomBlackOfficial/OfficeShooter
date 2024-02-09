@@ -5,26 +5,45 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Player Variables")]
+    public static PlayerController INSTANCE;
+
+    [Header("Assigned Variables")]
+    [SerializeField] private SpriteRenderer sprite;
+
+    [Header("Movement Settings")]
+    [SerializeField] private float _playerSpeed = 2;
+
+    [Header("Dodge Settings")]
     [SerializeField] private float _dodgeTimeStartup = 0.15f;
     [SerializeField] private float _dodgeTime = 0.75f;
-    [SerializeField] private float _playerSpeed = 2;
     [SerializeField] private float _dodgeSpeed = 3.5f;
+
+    [Header("Debug Settings")]
+    [SerializeField] private bool _enableDebugMode;
+    [SerializeField] private Color _dodgeColour;
+
+    private Rigidbody2D rb;
+    private Color _defaultColour;
     private Vector2 _movementInput = Vector2.zero;
     private Vector2 _lastMovement = Vector2.one;
     private bool _dodge = false;
     private bool _invulnerable = false;
     private bool _freezeNewMovementInput = false;
-    [Header("Debug Settings")]
-    [SerializeField] private bool _enableDebugMode;
-    [SerializeField] private Color _dodgeColour;
-    private Color _defaultColour;
 
+    private enum PlayerState
+    {
+        Default,
+        Dodging
+    }
 
-    // Get movement input from player controls
+    private PlayerState currentState = PlayerState.Default;
+
     public void InputMovement(InputAction.CallbackContext context)
     {
+        // Get movement input from player controls
+
         _movementInput = context.ReadValue<Vector2>();
+        Debug.Log(_movementInput);
         if (_movementInput != Vector2.zero && !_freezeNewMovementInput)
         {
             _lastMovement = _movementInput;
@@ -34,10 +53,10 @@ public class PlayerController : MonoBehaviour
             //Debug.Log(_movementInput);
         }
     }
-
-    // Get dodge input from player controls
     public void InputDodge(InputAction.CallbackContext context)
     {
+        // Get dodge input from player controls
+
         if (_dodge)
         {
             return;
@@ -69,17 +88,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private enum PlayerState
+    private void Awake()
     {
-        Default,
-        Dodging
+        INSTANCE = this;
+        rb = GetComponent<Rigidbody2D>();
+        _defaultColour = sprite.color;
     }
-
-    private PlayerState currentState = PlayerState.Default;
 
     private void Start()
     {
-        _defaultColour = GetComponent<SpriteRenderer>().color;
         ChangeState(PlayerState.Default);
     }
 
@@ -109,8 +126,8 @@ public class PlayerController : MonoBehaviour
 
         while (newState == currentState)
         {
-            Vector3 movement = new Vector3(_movementInput.x, _movementInput.y, 0);
-            transform.position += movement * _playerSpeed * Time.deltaTime;
+            Vector2 movement = new Vector2(_movementInput.x, _movementInput.y);
+            rb.velocity += movement * _playerSpeed * Time.deltaTime;
 
             yield return null;
             if (_dodge)
@@ -128,8 +145,9 @@ public class PlayerController : MonoBehaviour
         bool startup = true;
         while (_dodge)
         {
-            Vector3 movement = new Vector3(_lastMovement.x, _lastMovement.y, 0);
-            transform.position += movement * _dodgeSpeed * Time.deltaTime;
+            Vector2 movement = new Vector2(_lastMovement.x, _lastMovement.y);
+            rb.velocity += movement * _dodgeSpeed * Time.deltaTime;
+
             if (dodgeTime >= _dodgeTimeStartup && startup)
             {
                 startup = false;
@@ -140,6 +158,7 @@ public class PlayerController : MonoBehaviour
                 DisableInvulnerability();
                 _dodge = false;
             }
+
             yield return null;
             dodgeTime += Time.deltaTime;
         }
@@ -167,7 +186,7 @@ public class PlayerController : MonoBehaviour
         _invulnerable = true;
         if (_enableDebugMode)
         {
-            GetComponent<SpriteRenderer>().color = _dodgeColour;
+            sprite.color = _dodgeColour;
         }
     }
     private void DisableInvulnerability()
@@ -175,7 +194,7 @@ public class PlayerController : MonoBehaviour
         _invulnerable = false;
         if (_enableDebugMode)
         {
-            GetComponent<SpriteRenderer>().color = _defaultColour;
+            sprite.color = _defaultColour;
         }
     }
 
