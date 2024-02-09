@@ -6495,6 +6495,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4396590937437180039, guid: 3191aea061973cc48acc6e34ba801d8d, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051956616906137630, guid: 3191aea061973cc48acc6e34ba801d8d, type: 3}
+      propertyPath: _dodgeSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051956616906137630, guid: 3191aea061973cc48acc6e34ba801d8d, type: 3}
+      propertyPath: _playerSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6974719362727524889, guid: 3191aea061973cc48acc6e34ba801d8d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6581,6 +6593,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2142192384}
     m_Modifications:
+    - target: {fileID: 55059902646279696, guid: 422ada39aa58bc54aaf16a8264ef7730, type: 3}
+      propertyPath: m_UpdateMethod
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 94877135967660175, guid: 422ada39aa58bc54aaf16a8264ef7730, type: 3}
       propertyPath: m_Name
       value: Main Camera

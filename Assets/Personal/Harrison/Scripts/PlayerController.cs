@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
         // Get movement input from player controls
 
         _movementInput = context.ReadValue<Vector2>();
-        Debug.Log(_movementInput);
         if (_movementInput != Vector2.zero && !_freezeNewMovementInput)
         {
             _lastMovement = _movementInput;
@@ -127,7 +126,7 @@ public class PlayerController : MonoBehaviour
         while (newState == currentState)
         {
             Vector2 movement = new Vector2(_movementInput.x, _movementInput.y);
-            rb.velocity += movement * _playerSpeed * Time.deltaTime;
+            rb.velocity = movement * _playerSpeed;
 
             yield return null;
             if (_dodge)
@@ -146,7 +145,7 @@ public class PlayerController : MonoBehaviour
         while (_dodge)
         {
             Vector2 movement = new Vector2(_lastMovement.x, _lastMovement.y);
-            rb.velocity += movement * _dodgeSpeed * Time.deltaTime;
+            rb.velocity = movement * _dodgeSpeed;
 
             if (dodgeTime >= _dodgeTimeStartup && startup)
             {

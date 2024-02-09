@@ -82,12 +82,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 1442676955980787875}
-  _playerSpeed: 2
+  _playerSpeed: 300
   _dodgeTimeStartup: 0.15
-  _dodgeTime: 0.75
-  _dodgeSpeed: 3.5
-  _dodgeColour: {r: 0.6817121, g: 1, b: 0.66393745, a: 0.59607846}
+  _dodgeTime: 0.25
+  _dodgeSpeed: 800
   _enableDebugMode: 1
+  _dodgeColour: {r: 0.6817121, g: 1, b: 0.66393745, a: 0.59607846}
 --- !u!114 &8593988633251927114
 MonoBehaviour:
   m_ObjectHideFlags: 0
