@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PlayerHealthManager))]
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController INSTANCE;
@@ -23,9 +25,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Color _dodgeColour;
 
     private Rigidbody2D rb;
+    private PlayerHealthManager healthManager;
+
     private Color _defaultColour;
+
     private Vector2 _movementInput = Vector2.zero;
     private Vector2 _lastMovement = Vector2.one;
+
     private bool _dodge = false;
     private bool _invulnerable = false;
     private bool _freezeNewMovementInput = false;
@@ -90,7 +96,10 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         INSTANCE = this;
+
         rb = GetComponent<Rigidbody2D>();
+        healthManager = GetComponent<PlayerHealthManager>();
+
         _defaultColour = sprite.color;
     }
 
@@ -164,6 +173,11 @@ public class PlayerController : MonoBehaviour
 
         ResetMovement();
         ChangeState(PlayerState.Default);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        healthManager.AddHealth(-amount);
     }
 
     private void ResetMovement()
