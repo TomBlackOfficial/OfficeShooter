@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
         INSTANCE = this;
         rb = GetComponent<Rigidbody2D>();
         _defaultColour = sprite.color;
+        rb.gravityScale = 0;
     }
 
     private void Start()
