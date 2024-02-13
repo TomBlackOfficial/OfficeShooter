@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class ProjectileScript : MonoBehaviour
 {
-    [SerializeField] private ProjectileDataScript _projectileData;
+    [SerializeField] private ProjectileData _projectileData;
     private Rigidbody2D rb;
     private float _forwardAngle;
     private float _timeAlive;
@@ -30,18 +30,18 @@ public class ProjectileScript : MonoBehaviour
         }
         if (_timeAlive <= 0)
         {
-            ProjectilePoolScript.INSTANCE
+            ProjectilePoolScript.INSTANCE.FreeProjectile(gameObject);
         }
         _timeAlive -= Time.deltaTime;
     }
 
-    public void InitializeProjectile(Vector3 forward, ProjectileDataScript data)
+    public void InitializeProjectile(Vector3 forward, ProjectileData data)
     {
         transform.up = forward;
         SetProjectileData(data);
     }
 
-    private void SetProjectileData(ProjectileDataScript data)
+    private void SetProjectileData(ProjectileData data)
     {
         if (data != null)
         {

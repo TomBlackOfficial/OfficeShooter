@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private bool _dodge = false;
     private bool _invulnerable = false;
     private bool _freezeNewMovementInput = false;
+    private WeaponScript _myWeapon;
 
     private enum PlayerState
     {
@@ -87,12 +88,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void InputLook(InputAction.CallbackContext context)
+    {
+        if (_myWeapon != null)
+        {
+            if (context.control.name == "Keyboard and Mouse")
+            {
+                Vector3 mousePosition = context.ReadValue<Vector3>();
+                Vector3 lookAxis = mousePosition - transform.position;
+                _myWeapon.SetTargetPosition(lookAxis);
+            }
+            if (context.control.name == "Controller")
+            {
+                Vector2 controllerLookAxis = context.ReadValue<Vector2>();
+                _myWeapon.SetTargetPosition(controllerLookAxis);
+            }
+        }
+    }
+
     private void Awake()
     {
         INSTANCE = this;
         rb = GetComponent<Rigidbody2D>();
         _defaultColour = sprite.color;
         rb.gravityScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        _myWeapon = GetComponentInChildren<WeaponScript>();
     }
 
     private void Start()

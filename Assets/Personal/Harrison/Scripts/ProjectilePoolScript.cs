@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectilePoolScript : MonoBehaviour
 {
-    private Queue<GameObject> _projectilePool;
+    private Queue<GameObject> _projectilePool = new Queue<GameObject>();
     [SerializeField] private int _initialPoolSize;
     [SerializeField] private int _maxPoolSize;
     [SerializeField] private GameObject _baseProjectilePrefab;
@@ -38,17 +38,23 @@ public class ProjectilePoolScript : MonoBehaviour
         _currentPoolSize = _projectilePool.Count;
     }
 
-    private void FreeProjectile(GameObject projectile)
+    public void FreeProjectile(GameObject projectile)
     {
         projectile.SetActive(false);
         _projectilePool.Enqueue(projectile);
     }
 
-    private void UseProjectile()
+    public GameObject UseProjectile()
     {
         if (_projectilePool.Count > 0)
         {
-
+            return _projectilePool.Dequeue();
         }
+        else if (_currentPoolSize < _maxPoolSize)
+        {
+            _currentPoolSize++;
+            return Instantiate(_baseProjectilePrefab, transform);
+        }
+        return null;
     }
 }
