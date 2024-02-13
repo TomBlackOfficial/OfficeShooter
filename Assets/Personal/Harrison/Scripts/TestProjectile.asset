@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TestProjectile
   m_EditorClassIdentifier: 
   projectileSprite: {fileID: 0}
-  projectileSpeed: 0.43
+  projectileSpeed: 3
+  projectileRange: 8

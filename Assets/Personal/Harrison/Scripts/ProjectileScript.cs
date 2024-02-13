@@ -30,7 +30,7 @@ public class ProjectileScript : MonoBehaviour
         }
         if (_timeAlive <= 0)
         {
-            Destroy(gameObject);
+            ProjectilePoolScript.INSTANCE
         }
         _timeAlive -= Time.deltaTime;
     }
