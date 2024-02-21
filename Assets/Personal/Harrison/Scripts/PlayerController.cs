@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started)
         {
+            _myWeapon.StartFiringProjectiles();
             if (_enableDebugMode)
             {
                 Debug.Log("Start Firing");
@@ -81,6 +82,7 @@ public class PlayerController : MonoBehaviour
         }
         if (context.canceled)
         {
+            _myWeapon.StopFiringProjectiles();
             if (_enableDebugMode)
             {
                 Debug.Log("Stop Firing");
@@ -119,6 +121,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         ChangeState(PlayerState.Default);
+        _myWeapon.StopFiringProjectiles();
     }
 
     private void ChangeState(PlayerState newState)
@@ -149,7 +152,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 movement = new Vector2(_movementInput.x, _movementInput.y);
             rb.velocity = movement * _playerSpeed;
-
+            _myWeapon.SetTargetPosition(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
             yield return null;
             if (_dodge)
             {

@@ -11,14 +11,13 @@ public class ProjectileScript : MonoBehaviour
     private Rigidbody2D rb;
     private float _forwardAngle;
     private float _timeAlive;
+    private bool _belongsToPlayer = true;
 
     private void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
         rb = GetComponent<Rigidbody2D>();
-        Vector3 forward = new Vector3(-1, 0, 0);
         _timeAlive = 0;
-        InitializeProjectile(forward, _projectileData);
         rb.gravityScale = 0;
     }
 
@@ -35,10 +34,12 @@ public class ProjectileScript : MonoBehaviour
         _timeAlive -= Time.deltaTime;
     }
 
-    public void InitializeProjectile(Vector3 forward, ProjectileData data)
+    public void InitializeProjectile(Vector3 position, Vector3 forward, ProjectileData data, bool playerProjectile)
     {
+        transform.position = position;
         transform.up = forward;
         SetProjectileData(data);
+        _belongsToPlayer = playerProjectile;
     }
 
     private void SetProjectileData(ProjectileData data)

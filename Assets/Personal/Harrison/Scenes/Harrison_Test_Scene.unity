@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53dd9dd427ef1c448b3485cfe22c4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponData: {fileID: 0}
+  _weaponData: {fileID: 11400000, guid: 91b451270e56e304b90d813803b873d8, type: 2}
   _projectileSpawnPoint: {fileID: 820283992}
 --- !u!1 &711899600
 GameObject:
