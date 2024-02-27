@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _dodgeTime = 0.75f;
     [SerializeField] private float _dodgeSpeed = 3.5f;
 
+    [Header("Weapon Settings")]
+    [SerializeField] private WeaponData _starterWeapon;
+    [SerializeField] private int _maxWeaponsHeld = 3;
+
     [Header("Debug Settings")]
     [SerializeField] private bool _enableDebugMode;
     [SerializeField] private Color _dodgeColour;
@@ -30,6 +34,9 @@ public class PlayerController : MonoBehaviour
     private bool _invulnerable = false;
     private bool _freezeNewMovementInput = false;
     private WeaponScript _myWeapon;
+    private List<WeaponData> _heldWeapons = new List<WeaponData>();
+    private int _currentEquipedWeapon = 0;
+    
 
     private enum PlayerState
     {
@@ -108,6 +115,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void InputSwapWeapon(InputAction.CallbackContext context)
+    {
+        int direction = context.ReadValue<int>();
+        ChangeWeapon(direction);
+    }
+
     private void Awake()
     {
         INSTANCE = this;
@@ -120,8 +133,12 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        
         ChangeState(PlayerState.Default);
-        _myWeapon.StopFiringProjectiles();
+        if (_myWeapon != null)
+        {
+            _myWeapon.StopFiringProjectiles();
+        }
     }
 
     private void ChangeState(PlayerState newState)
@@ -220,6 +237,62 @@ public class PlayerController : MonoBehaviour
         {
             sprite.color = _defaultColour;
         }
+    }
+
+    private void AddWeapon(WeaponData weapon)
+    {
+        if (_heldWeapons.Count == 0)
+        {
+            _heldWeapons.Add(weapon);
+            _currentEquipedWeapon = 0;
+            return;
+        }
+        if (_heldWeapons.Contains(weapon))
+        {
+            return;
+        }
+        if (_heldWeapons.Count == _maxWeaponsHeld)
+        {
+            _heldWeapons.Remove(_heldWeapons[_currentEquipedWeapon]);
+        }
+        _heldWeapons.Add(weapon);
+        _currentEquipedWeapon = _heldWeapons.Count - 1;
+        SwapWeapon(_heldWeapons[_currentEquipedWeapon]);
+    }
+
+    private void ChangeWeapon(int direction = 1)
+    {
+        if (direction == 0)
+        {
+            return;
+        }
+        if (direction > 0)
+        {
+            _currentEquipedWeapon++;
+            if (_currentEquipedWeapon >= _heldWeapons.Count)
+            {
+                _currentEquipedWeapon = 0;
+            }
+        }
+        else
+        {
+            _currentEquipedWeapon--;
+            if (_currentEquipedWeapon < 0)
+            {
+                _currentEquipedWeapon = _heldWeapons.Count - 1;
+            }
+        }
+        SwapWeapon(_heldWeapons[_currentEquipedWeapon]);
+    }
+
+    private void SwapWeapon(WeaponData weaponData)
+    {
+        if (_myWeapon == null)
+        {
+            Debug.LogError("Player does not have a Weapon Object");
+            return;
+        }
+        _myWeapon.SwapWeapon(weaponData);
     }
 
     public bool GetVulnerability()

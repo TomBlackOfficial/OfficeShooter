@@ -10,6 +10,7 @@ public class WeaponScript : MonoBehaviour
     private bool _attachedToPlayer = false;
     private bool _firing = false;
     private float _fireTime = 0;
+    private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class WeaponScript : MonoBehaviour
         {
             _attachedToPlayer = false;
         }
+        SwapWeapon(_weaponData);
     }
     public void SetTargetPosition(Vector2 target)
     {
@@ -53,5 +55,6 @@ public class WeaponScript : MonoBehaviour
     public void SwapWeapon(WeaponData data)
     {
         _weaponData = data;
+        _spriteRenderer.sprite = _weaponData.weaponSprite;
     }
 }
