@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9150404365870992008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305388967922129005}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 2458675519794852162}
   - component: {fileID: 1944742981228182943}
   - component: {fileID: 6120867163757085422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,8 @@ GameObject:
   - component: {fileID: 4396590937437180039}
   - component: {fileID: 3519389669253643157}
   - component: {fileID: 6128233480164399343}
-  m_Layer: 0
+  - component: {fileID: 7231264320502023526}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,6 +409,19 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &7231264320502023526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6974719362727524889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a122be4b0ab82c044828e269327da0aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 6
 --- !u!1 &8813635059848847097
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705464007422574498}
   - component: {fileID: 1442676955980787875}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

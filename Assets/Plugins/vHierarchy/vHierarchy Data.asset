@@ -27,6 +27,7 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1727147469-0
         - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1010816584-0
         - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1376597954-0
+        - globalObjectIdString: GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-571325347-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Camera Icon
@@ -46,3 +47,5 @@ MonoBehaviour:
           iconNameOrGuid: Folder Icon
         - colorIndex: 0
           iconNameOrGuid: Canvas Icon
+        - colorIndex: 2
+          iconNameOrGuid: 
