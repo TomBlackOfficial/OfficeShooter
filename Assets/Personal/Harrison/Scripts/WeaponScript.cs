@@ -12,6 +12,12 @@ public class WeaponScript : MonoBehaviour
     private float _fireTime = 0;
     private SpriteRenderer _spriteRenderer;
 
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        SwapWeapon(_weaponData);
+    }
+
     private void Start()
     {
         if (transform.parent.gameObject.TryGetComponent<PlayerController>(out PlayerController player))
@@ -22,15 +28,14 @@ public class WeaponScript : MonoBehaviour
         {
             _attachedToPlayer = false;
         }
-        SwapWeapon(_weaponData);
     }
     public void SetTargetPosition(Vector2 target)
     {
-        transform.up = new Vector3(target.x, target.y, 0);
+        transform.right = new Vector3(target.x, target.y, 0);
     }
     public void SetTargetPosition(Vector3 target)
     {
-        transform.up = new Vector3(target.x, target.y, 0);
+        transform.right = new Vector3(target.x, target.y, 0);
     }
     public void StartFiringProjectiles()
     {
@@ -49,7 +54,7 @@ public class WeaponScript : MonoBehaviour
             GameObject projectile = ProjectilePoolScript.INSTANCE.UseProjectile();
             projectile.SetActive(true);
             ProjectileScript projectileScript = projectile.GetComponent<ProjectileScript>();
-            projectileScript.InitializeProjectile(_projectileSpawnPoint.position, transform.up, _weaponData.projectileData, _attachedToPlayer);
+            projectileScript.InitializeProjectile(_projectileSpawnPoint.position, transform.right, _weaponData.projectileData, _attachedToPlayer);
         }
     }
     public void SwapWeapon(WeaponData data)

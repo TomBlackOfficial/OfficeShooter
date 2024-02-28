@@ -147,6 +147,7 @@ public class PlayerController : MonoBehaviour
         if (_myWeapon != null)
         {
             _myWeapon.StopFiringProjectiles();
+            _myWeapon.SwapWeapon(_starterWeapon);
         }
     }
 
