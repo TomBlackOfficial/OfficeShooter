@@ -25,7 +25,7 @@ public class ProjectileScript : MonoBehaviour
     {
         if (_projectileData != null)
         {
-            rb.velocity = transform.up * _projectileData.projectileSpeed;
+            rb.velocity = -transform.right * _projectileData.projectileSpeed;
         }
         if (_timeAlive <= 0)
         {
@@ -37,7 +37,7 @@ public class ProjectileScript : MonoBehaviour
     public void InitializeProjectile(Vector3 position, Vector3 forward, ProjectileData data, bool playerProjectile)
     {
         transform.position = position;
-        transform.up = forward;
+        transform.right = -forward;
         SetProjectileData(data);
         _belongsToPlayer = playerProjectile;
     }

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2333075457004125316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9150404365870992008}
+  m_Layer: 0
+  m_Name: Projectile Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9150404365870992008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333075457004125316}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.837, y: -0.137, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2458675519794852162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3356417021823935339
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,9 +72,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2458675519794852162}
+  - component: {fileID: 1944742981228182943}
   - component: {fileID: 6120867163757085422}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,12 +90,27 @@ Transform:
   m_GameObject: {fileID: 5510972496184768577}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.532, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 9150404365870992008}
   m_Father: {fileID: 4377105616012366907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944742981228182943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5510972496184768577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53dd9dd427ef1c448b3485cfe22c4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponData: {fileID: 11400000, guid: 87c832ed736e87b47af4de8a80de4455, type: 2}
+  _projectileSpawnPoint: {fileID: 9150404365870992008}
 --- !u!212 &6120867163757085422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -105,12 +152,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ff0d22cbec2fe449a8a72feb6d54af4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -171,7 +218,7 @@ MonoBehaviour:
   _dodgeTimeStartup: 0.15
   _dodgeTime: 0.25
   _dodgeSpeed: 8
-  _starterWeapon: {fileID: 0}
+  _starterWeapon: {fileID: 11400000, guid: 87c832ed736e87b47af4de8a80de4455, type: 2}
   _maxWeaponsHeld: 3
   _enableDebugMode: 1
   _dodgeColour: {r: 0.6817121, g: 1, b: 0.66393745, a: 0.59607846}
