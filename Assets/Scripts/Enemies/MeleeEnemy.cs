@@ -11,7 +11,7 @@ public class MeleeEnemy : Enemy
     {
         if (ai.GetDistance() < 2f)
         {
-            PlayerController.INSTANCE.TakeDamage(damage);
+            //PlayerController.INSTANCE.TakeDamage(damage);
         }
     }
 }

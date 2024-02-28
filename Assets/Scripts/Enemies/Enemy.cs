@@ -2,59 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Damageable
 {
     protected AdvancedEnemyAI ai;
     protected Rigidbody2D rb;
     protected Animator anim;
 
-    [Header("Assign")]
-    [SerializeField] protected GameObject deathVFX;
-    [SerializeField] protected GameObject lootDrop;
-
-    [Header("Basic Info")]
-    [SerializeField] protected int health;
-
     protected float moveSpeedMultiplier = 1;
 
-    [HideInInspector] public bool dead = false;
-
-    private void Awake()
+    protected virtual void Awake()
     {
+        base.Awake();
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         ai = GetComponent<AdvancedEnemyAI>();
     }
 
-    public void TakeDamage(int amount)
+    public override void TakeDamage(int amount)
     {
-        if (health <= 0)
-            return;
-
-        health -= amount;
+        base.TakeDamage(amount);
 
         PlayCustomAnimation("GetHit");
-
-        if (health <= 0)
-            Die();
     }
 
-    private void Die()
+    protected override void Die()
     {
-        if (deathVFX != null)
-        {
-            GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
-            Destroy(vfx, 1);
-        }
-        if (lootDrop != null)
-        {
-            GameObject loot = Instantiate(lootDrop, transform.position, Quaternion.identity);
-        }
+        base.Die();
 
-        PlayCustomAnimation("Die");
-        rb.velocity = Vector2.zero;
-        rb.isKinematic = true;
-        dead = true;
+        DestroyGameObject();
     }
 
     private void DestroyGameObject()

@@ -5,12 +5,13 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHealthManager))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Damageable
 {
     public static PlayerController INSTANCE;
 
     [Header("Assigned Variables")]
     [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private GameObject weapon;
 
     [Header("Movement Settings")]
     [SerializeField] private float _playerSpeed = 2;
@@ -29,13 +30,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Color _dodgeColour;
 
     private Rigidbody2D rb;
-    private PlayerHealthManager healthManager;
 
     private Color _defaultColour;
 
     private Vector2 _movementInput = Vector2.zero;
     private Vector2 _lastMovement = Vector2.one;
 
+    private bool _facingRight = true;
     private bool _dodge = false;
     private bool _invulnerable = false;
     private bool _freezeNewMovementInput = false;
@@ -132,7 +133,6 @@ public class PlayerController : MonoBehaviour
         INSTANCE = this;
 
         rb = GetComponent<Rigidbody2D>();
-        healthManager = GetComponent<PlayerHealthManager>();
 
         _defaultColour = sprite.color;
         rb.gravityScale = 0;
@@ -180,6 +180,9 @@ public class PlayerController : MonoBehaviour
             Vector2 movement = new Vector2(_movementInput.x, _movementInput.y);
             rb.velocity = movement * _playerSpeed;
             _myWeapon.SetTargetPosition(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+
+            UpdateSpriteDirection();
+
             yield return null;
             if (_dodge)
             {
@@ -218,9 +221,27 @@ public class PlayerController : MonoBehaviour
         ChangeState(PlayerState.Default);
     }
 
-    public void TakeDamage(int amount)
+    private void UpdateSpriteDirection()
     {
-        healthManager.AddHealth(-amount);
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (mousePos.x > transform.position.x && !_facingRight)
+        {
+            Flip();
+        }
+        else if (mousePos.x < transform.position.x && _facingRight)
+        {
+            Flip();
+        }
+    }
+
+    private void Flip()
+    {
+        _facingRight = !_facingRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1, 1, 1);
+        weapon.transform.localScale = new Vector3(weapon.transform.localScale.x * -1, weapon.transform.localScale.y * -1, 1);
+        //weaponSprite.flipX = !weaponSprite.flipX;
+        //weaponSprite.flipY = !weaponSprite.flipY;
     }
 
     private void ResetMovement()

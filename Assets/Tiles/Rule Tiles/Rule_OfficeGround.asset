@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Rule_OfficeGround
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 507307094, guid: 78f2af8cb707101478ac1d0275b071f8, type: 3}
+  m_DefaultSprite: {fileID: 508290597, guid: c188210e6941e4d498d41e6d58201fc9, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: -631451623, guid: 78f2af8cb707101478ac1d0275b071f8, type: 3}
-    - {fileID: 1056118743, guid: 78f2af8cb707101478ac1d0275b071f8, type: 3}
-    - {fileID: 507307094, guid: 78f2af8cb707101478ac1d0275b071f8, type: 3}
-    - {fileID: 507307094, guid: 78f2af8cb707101478ac1d0275b071f8, type: 3}
-    - {fileID: 507307094, guid: 78f2af8cb707101478ac1d0275b071f8, type: 3}
+    - {fileID: 508290597, guid: c188210e6941e4d498d41e6d58201fc9, type: 3}
+    - {fileID: -101906685, guid: c188210e6941e4d498d41e6d58201fc9, type: 3}
+    - {fileID: 922497479, guid: c188210e6941e4d498d41e6d58201fc9, type: 3}
+    - {fileID: 922497479, guid: c188210e6941e4d498d41e6d58201fc9, type: 3}
+    - {fileID: 922497479, guid: c188210e6941e4d498d41e6d58201fc9, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
