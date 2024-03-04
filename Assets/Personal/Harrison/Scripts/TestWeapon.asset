@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: 0}
   projectileData: {fileID: 11400000, guid: a4e115984ac54a34f8fe47dff240318d, type: 2}
-  fireRate: 1
+  fireRate: 10

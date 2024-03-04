@@ -10,12 +10,18 @@ public class WeaponScript : MonoBehaviour
     private bool _attachedToPlayer = false;
     private bool _firing = false;
     private float _fireTime = 0;
+    private float _fireRateDividend = 10;
+    private float _fireRateDivisor;
+    private float _minFireTime = 0.1f;
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         SwapWeapon(_weaponData);
+
+        //Calculate divisor for fire rate
+        _fireRateDivisor = _fireRateDividend / _minFireTime;
     }
 
     private void Start()
@@ -50,7 +56,10 @@ public class WeaponScript : MonoBehaviour
         _fireTime -= Time.deltaTime;
         if (_fireTime <= 0 && _firing)
         {
-            _fireTime = _weaponData.fireRate;
+            //Calculating the _fireCooldown based on the firerate
+            _fireTime = _fireRateDividend / (Mathf.Clamp(Mathf.Log(_weaponData.fireRate / 10), 0.05f, 1f) * _fireRateDivisor);
+            Debug.Log(_fireTime.ToString());
+            //_fireTime = _minFireTime;
             GameObject projectile = ProjectilePoolScript.INSTANCE.UseProjectile();
             projectile.SetActive(true);
             ProjectileScript projectileScript = projectile.GetComponent<ProjectileScript>();
