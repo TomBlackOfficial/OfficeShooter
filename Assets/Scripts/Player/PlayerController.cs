@@ -126,8 +126,11 @@ public class PlayerController : Damageable
 
     public void InputSwapWeapon(InputAction.CallbackContext context)
     {
-        float direction = context.ReadValue<float>();
-        ChangeWeapon(direction);
+        if (context.started)
+        {
+            float direction = context.ReadValue<float>();
+            ChangeWeapon(direction);
+        }
     }
 
     public void InputAction(InputAction.CallbackContext context)

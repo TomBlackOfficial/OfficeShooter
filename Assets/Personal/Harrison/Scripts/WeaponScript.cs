@@ -63,7 +63,14 @@ public class WeaponScript : MonoBehaviour
             GameObject projectile = ProjectilePoolScript.INSTANCE.UseProjectile();
             projectile.SetActive(true);
             ProjectileScript projectileScript = projectile.GetComponent<ProjectileScript>();
-            projectileScript.InitializeProjectile(_projectileSpawnPoint.position, transform.right, _weaponData.projectileData, _attachedToPlayer);
+            if (_weaponData.overrideDamage)
+            {
+                projectileScript.InitializeProjectile(_projectileSpawnPoint.position, transform.right, _weaponData.projectileData, _attachedToPlayer, _weaponData.damage);
+            }
+            else
+            {
+                projectileScript.InitializeProjectile(_projectileSpawnPoint.position, transform.right, _weaponData.projectileData, _attachedToPlayer);
+            }
         }
     }
     public void SwapWeapon(WeaponData data)
