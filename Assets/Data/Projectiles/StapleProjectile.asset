@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ab90369991dbc499f6caffbf279821, type: 3}
-  m_Name: LootTable
+  m_Script: {fileID: 11500000, guid: 38fb1237d3459d44b981ebdd8e457fce, type: 3}
+  m_Name: StapleProjectile
   m_EditorClassIdentifier: 
-  lootAndDropChance:
-    _serializedList:
-    - Key: {fileID: 11400000, guid: 1aed8b8ffdac5ac42904ae869b4fe29d, type: 2}
-      Value: 2.5
+  projectileSprite: {fileID: 0}
+  projectileSpeed: 1
+  projectileRange: 8

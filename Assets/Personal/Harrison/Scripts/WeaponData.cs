@@ -8,4 +8,6 @@ public class WeaponData : ScriptableObject
     public Sprite weaponSprite;
     public ProjectileData projectileData;
     public float fireRate;
+    public bool overrideDamage = false;
+    public int damage = 1;
 }

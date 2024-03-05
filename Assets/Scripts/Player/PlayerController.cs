@@ -43,6 +43,8 @@ public class PlayerController : Damageable
     private WeaponScript _myWeapon;
     private List<WeaponData> _heldWeapons = new List<WeaponData>();
     private int _currentEquipedWeapon = 0;
+    private List<LootDropScript> _nearbyLoot = new List<LootDropScript>();
+    private LootDropScript _closestLoot;
     
 
     private enum PlayerState
@@ -124,8 +126,16 @@ public class PlayerController : Damageable
 
     public void InputSwapWeapon(InputAction.CallbackContext context)
     {
-        int direction = context.ReadValue<int>();
+        float direction = context.ReadValue<float>();
         ChangeWeapon(direction);
+    }
+
+    public void InputAction(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Interact();
+        }
     }
 
     private void Awake()
@@ -144,10 +154,10 @@ public class PlayerController : Damageable
     {
         
         ChangeState(PlayerState.Default);
+        AddWeapon(_starterWeapon);
         if (_myWeapon != null)
         {
             _myWeapon.StopFiringProjectiles();
-            _myWeapon.SwapWeapon(_starterWeapon);
         }
     }
 
@@ -180,6 +190,8 @@ public class PlayerController : Damageable
             Vector2 movement = new Vector2(_movementInput.x, _movementInput.y);
             rb.velocity = movement * _playerSpeed;
             _myWeapon.SetTargetPosition(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+
+            CalculateClosestLoot();
 
             UpdateSpriteDirection();
 
@@ -289,6 +301,7 @@ public class PlayerController : Damageable
         }
         if (_heldWeapons.Count == _maxWeaponsHeld)
         {
+            LootPoolManager.INSTANCE.CreateLoot(transform.position, _heldWeapons[_currentEquipedWeapon]);
             _heldWeapons.Remove(_heldWeapons[_currentEquipedWeapon]);
         }
         _heldWeapons.Add(weapon);
@@ -296,8 +309,9 @@ public class PlayerController : Damageable
         SwapWeapon(_heldWeapons[_currentEquipedWeapon]);
     }
 
-    private void ChangeWeapon(int direction = 1)
+    private void ChangeWeapon(float direction = 1)
     {
+        Debug.Log(_heldWeapons);
         if (direction == 0)
         {
             return;
@@ -318,6 +332,7 @@ public class PlayerController : Damageable
                 _currentEquipedWeapon = _heldWeapons.Count - 1;
             }
         }
+        Debug.Log($"equip {_currentEquipedWeapon}");
         SwapWeapon(_heldWeapons[_currentEquipedWeapon]);
     }
 
@@ -331,7 +346,84 @@ public class PlayerController : Damageable
         _myWeapon.SwapWeapon(weaponData);
     }
 
+    private void Interact()
+    {
+        if (_closestLoot != null)
+        {
+            LootData data = _closestLoot.UseLoot();
+            if (data != null)
+            {
+                if (data.weaponDrop)
+                {
+                    if (data.weaponData != null)
+                    {
+                        AddWeapon(data.weaponData);
+                    }
+                    if (data.healthDrop)
+                    {
+                        currentHealth = Mathf.Min(currentHealth + data.healAmount, maxHealth);
+                    }
+                }
+            }
+            LootPoolManager.INSTANCE.FreeLoot(_closestLoot.gameObject);
+        }
+    }
 
+    private void CalculateClosestLoot()
+    {
+        if (_nearbyLoot.Count == 0)
+        {
+            _closestLoot = null;
+            return;
+        }
+        if (_nearbyLoot.Count == 1)
+        {
+            _closestLoot = _nearbyLoot[0];
+            _closestLoot.ShowButton(true);
+            return;
+        }
+
+        LootDropScript closestLoot = null;
+        float closestDistance = float.MaxValue;
+
+        for (int l = 0; l < _nearbyLoot.Count; l++)
+        {
+            float thisDistance = Vector3.Distance(_nearbyLoot[l].gameObject.transform.position, transform.position);
+            if (thisDistance < closestDistance)
+            {
+                closestDistance = thisDistance;
+                if (closestLoot != null)
+                {
+                    closestLoot.ShowButton(false);
+                }
+                closestLoot = _nearbyLoot[l];
+            }
+            else
+            {
+                _nearbyLoot[l].ShowButton(false);
+            }
+        }
+        _closestLoot = closestLoot;
+        _closestLoot.ShowButton(true);
+    }
+
+    public void AddLoot(LootDropScript loot)
+    {
+        if (_nearbyLoot.Contains(loot))
+        {
+            return;
+        }
+        _nearbyLoot.Add(loot);
+    }
+
+    public void RemoveLoot(LootDropScript loot)
+    {
+        if (!_nearbyLoot.Contains(loot))
+        {
+            return;
+        }
+        _nearbyLoot.Remove(loot);
+    }
 
     public bool GetVulnerability()
     {

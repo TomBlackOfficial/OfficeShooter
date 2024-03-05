@@ -87,4 +87,44 @@ public class LootPoolManager : MonoBehaviour
         lootDrop.GetComponent<LootDropScript>().SetLootData(selectedLoot);
         lootDrop.SetActive(true);
     }
+
+    public void CreateLoot(Vector3 position, WeaponData weapon)
+    {
+        List<LootData> lootList = _lootTable.lootAndDropChance.Keys.ToList();
+
+        LootData selectedLoot = null;
+
+        for (int l = 0; l < lootList.Count; l++)
+        {
+            if (lootList[l].weaponData == weapon)
+            {
+                selectedLoot = lootList[l];
+                break;
+            }
+        }
+
+        if (selectedLoot == null)
+        {
+            return;
+        }
+
+        GameObject lootDrop = null;
+
+        if (_lootPool.Count > 0)
+        {
+            lootDrop = _lootPool.Dequeue();
+            lootDrop.transform.position = position;
+        }
+        else if (_currentPoolSize < _maxPoolSize)
+        {
+            _currentPoolSize++;
+            lootDrop = Instantiate(_baseLootPrefab, position, Quaternion.identity, transform);
+        }
+        if (lootDrop == null)
+        {
+            return;
+        }
+        lootDrop.GetComponent<LootDropScript>().SetLootData(selectedLoot);
+        lootDrop.SetActive(true);
+    }
 }

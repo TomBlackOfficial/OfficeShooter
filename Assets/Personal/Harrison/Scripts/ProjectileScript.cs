@@ -12,6 +12,7 @@ public class ProjectileScript : MonoBehaviour
     private float _forwardAngle;
     private float _timeAlive;
     private bool _belongsToPlayer = true;
+    private int _damage = 1;
 
     private void Awake()
     {
@@ -40,6 +41,16 @@ public class ProjectileScript : MonoBehaviour
         transform.right = -forward;
         SetProjectileData(data);
         _belongsToPlayer = playerProjectile;
+        _damage = _projectileData.projectileDamage;
+    }
+
+    public void InitializeProjectile(Vector3 position, Vector3 forward, ProjectileData data, bool playerProjectile, int damage)
+    {
+        transform.position = position;
+        transform.right = -forward;
+        SetProjectileData(data);
+        _belongsToPlayer = playerProjectile;
+        _damage = damage;
     }
 
     private void SetProjectileData(ProjectileData data)
@@ -59,12 +70,13 @@ public class ProjectileScript : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Damageable target))
         {
-            target.TakeDamage();
-        }
-
-        if (!collision.CompareTag("Player"))
-        {
-            ProjectilePoolScript.INSTANCE.FreeProjectile(gameObject);
+            bool hitPlayer = collision.gameObject.TryGetComponent<PlayerController>(out PlayerController player);
+            if ((_belongsToPlayer && !hitPlayer) ||
+                (!_belongsToPlayer && hitPlayer))
+            {
+                target.TakeDamage(_damage);
+                ProjectilePoolScript.INSTANCE.FreeProjectile(gameObject);
+            }
         }
     }
 }
