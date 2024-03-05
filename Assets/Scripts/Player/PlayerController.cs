@@ -331,8 +331,16 @@ public class PlayerController : Damageable
         _myWeapon.SwapWeapon(weaponData);
     }
 
+
+
     public bool GetVulnerability()
     {
         return !_invulnerable;
+    }
+
+    protected override void Die()
+    {
+        base.Die();
+        //GameManager.INSTANCE.GameOver();
     }
 }

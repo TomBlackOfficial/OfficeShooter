@@ -29,7 +29,7 @@ public class Enemy : Damageable
     protected override void Die()
     {
         base.Die();
-
+        //GameManager.INSTANCE.CountEnemyDeath();
         DestroyGameObject();
     }
 

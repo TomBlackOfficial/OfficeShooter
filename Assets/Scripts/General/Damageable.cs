@@ -35,7 +35,6 @@ public class Damageable : MonoBehaviour
         if (deathVFX != null)
         {
             GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
-            Destroy(vfx, 1);
         }
         if (lootDrop != null)
         {
