@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fc7f214758a1245a91e31bef96a916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pickupKeySprite: {fileID: 21300000, guid: 58c979756a68bd2499ce21c8f66e7056, type: 3}
-  _keyDistance: 0.5
+  _pickupKeySprite: {fileID: 21300000, guid: eeb70dd398738d246a987c408bc9a9d1, type: 3}
+  _keyDistance: 0.75
   _displayGameObject: {fileID: 8898754116968329861}
 --- !u!212 &1884243705943731988
 SpriteRenderer:
