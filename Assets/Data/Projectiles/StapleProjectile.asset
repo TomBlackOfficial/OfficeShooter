@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38fb1237d3459d44b981ebdd8e457fce, type: 3}
   m_Name: StapleProjectile
   m_EditorClassIdentifier: 
-  projectileSprite: {fileID: 0}
-  projectileSpeed: 1
-  projectileRange: 8
+  projectileSprite: {fileID: 21300000, guid: 9a5512dd39b477e4a8e49a558a8bb841, type: 3}
+  projectileSpeed: 4.9
+  projectileRange: 5.72
+  projectileDamage: 1

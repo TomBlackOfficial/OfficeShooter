@@ -78,5 +78,9 @@ public class ProjectileScript : MonoBehaviour
                 ProjectilePoolScript.INSTANCE.FreeProjectile(gameObject);
             }
         }
+        else if (!collision.isTrigger)
+        {
+            ProjectilePoolScript.INSTANCE.FreeProjectile(gameObject);
+        }
     }
 }

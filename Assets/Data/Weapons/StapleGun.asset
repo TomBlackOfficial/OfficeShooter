@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83b116157525d141bdbf97294433f07, type: 3}
   m_Name: StapleGun
   m_EditorClassIdentifier: 
-  weaponSprite: {fileID: 0}
-  projectileData: {fileID: 0}
-  fireRate: 0
+  weaponSprite: {fileID: 21300000, guid: dcd97e2d40dd23e43ac0556c45c04f05, type: 3}
+  projectileData: {fileID: 11400000, guid: dc80943349aa5004c965b3aead6bb18d, type: 2}
+  fireRate: 7.15
+  overrideDamage: 1
+  damage: 3
