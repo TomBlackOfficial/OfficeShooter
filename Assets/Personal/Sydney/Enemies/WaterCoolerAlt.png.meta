@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: dd1eca4270a1e6146b84614609048d2e
+guid: 03de5ddc1c1f6b041bfcb40dde072369
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -933539732533572662
-    second: WaterCooler_0
+      213: -2899759759559087764
+    second: WaterCoolerAlt_0
   - first:
-      213: -4650553329144923304
-    second: WaterCooler_1
+      213: -6224391677706571805
+    second: WaterCoolerAlt_1
   - first:
-      213: 7329601563946921146
-    second: WaterCooler_2
+      213: 1074909162498287947
+    second: WaterCoolerAlt_2
   - first:
-      213: 4999257248832744798
-    second: WaterCooler_3
+      213: -8036932074034523609
+    second: WaterCoolerAlt_3
   - first:
-      213: 4148736444972384194
-    second: WaterCooler_4
+      213: 476275559963410185
+    second: WaterCoolerAlt_4
   - first:
-      213: 5696747067827776519
-    second: WaterCooler_5
+      213: -378558717838329107
+    second: WaterCoolerAlt_5
   - first:
-      213: 7324286977825331061
-    second: WaterCooler_6
+      213: -591797999247981050
+    second: WaterCoolerAlt_6
   - first:
-      213: 50192588456619904
-    second: WaterCooler_7
+      213: -6306830740472520723
+    second: WaterCoolerAlt_7
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterCooler_0
+      name: WaterCoolerAlt_0
       rect:
         serializedVersion: 2
         x: 9
@@ -133,17 +133,59 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: acb8f923f866b03f0800000000000000
-      internalID: -933539732533572662
+      spriteID: c69228dbcdbf1c7d0800000000000000
+      internalID: -2899759759559087764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterCooler_1
+      name: WaterCoolerAlt_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 37
+        y: 0
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3efe6635fb48e99a0800000000000000
+      internalID: -6224391677706571805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterCoolerAlt_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49e58c2038daee00800000000000000
+      internalID: 1074909162498287947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterCoolerAlt_3
+      rect:
+        serializedVersion: 2
+        x: 102
         y: 0
         width: 17
         height: 31
@@ -154,56 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85b7e47036ae57fb0800000000000000
-      internalID: -4650553329144923304
+      spriteID: 7229a333cd4177090800000000000000
+      internalID: -8036932074034523609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterCooler_2
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 0
-        width: 17
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abc243cd9c9f7b560800000000000000
-      internalID: 7329601563946921146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterCooler_3
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 0
-        width: 16
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5de8790bfde06540800000000000000
-      internalID: 4999257248832744798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterCooler_4
+      name: WaterCoolerAlt_4
       rect:
         serializedVersion: 2
         x: 137
@@ -217,38 +217,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cfbb45d0d5439930800000000000000
-      internalID: 4148736444972384194
+      spriteID: 90fb1de29121c9600800000000000000
+      internalID: 476275559963410185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterCooler_5
+      name: WaterCoolerAlt_5
       rect:
         serializedVersion: 2
         x: 169
-        y: 0
-        width: 16
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70c6f198649ee0f40800000000000000
-      internalID: 5696747067827776519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WaterCooler_6
-      rect:
-        serializedVersion: 2
-        x: 201
         y: 0
         width: 17
         height: 31
@@ -259,14 +238,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5775c4a533815a560800000000000000
-      internalID: 7324286977825331061
+      spriteID: dea7e901ad61fbaf0800000000000000
+      internalID: -378558717838329107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterCooler_7
+      name: WaterCoolerAlt_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606890cead289c7f0800000000000000
+      internalID: -591797999247981050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WaterCoolerAlt_7
       rect:
         serializedVersion: 2
         x: 233
@@ -280,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08f605da4e152b000800000000000000
-      internalID: 50192588456619904
+      spriteID: def1f974bd2a978a0800000000000000
+      internalID: -6306830740472520723
       vertices: []
       indices: 
       edges: []
@@ -297,14 +297,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WaterCooler_0: -933539732533572662
-      WaterCooler_1: -4650553329144923304
-      WaterCooler_2: 7329601563946921146
-      WaterCooler_3: 4999257248832744798
-      WaterCooler_4: 4148736444972384194
-      WaterCooler_5: 5696747067827776519
-      WaterCooler_6: 7324286977825331061
-      WaterCooler_7: 50192588456619904
+      WaterCoolerAlt_0: -2899759759559087764
+      WaterCoolerAlt_1: -6224391677706571805
+      WaterCoolerAlt_2: 1074909162498287947
+      WaterCoolerAlt_3: -8036932074034523609
+      WaterCoolerAlt_4: 476275559963410185
+      WaterCoolerAlt_5: -378558717838329107
+      WaterCoolerAlt_6: -591797999247981050
+      WaterCoolerAlt_7: -6306830740472520723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

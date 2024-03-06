@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 37b05ae930cb2c94581f771553289e7a
+guid: 5ccf5c9b10f5d674c9b093b50f3479a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1113024758385402753
-    second: SkinnyGattlingGun_0
-  - first:
-      213: 3552010035122562286
-    second: SkinnyGattlingGun_1
-  - first:
-      213: -4934630051905201557
-    second: SkinnyGattlingGun_2
+      213: -212999708846781106
+    second: BackgroundPattern_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -104,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SkinnyGattlingGun_0
+      name: BackgroundPattern_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 5
-        width: 20
-        height: 12
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,50 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 183e6c5ee12427f00800000000000000
-      internalID: 1113024758385402753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkinnyGattlingGun_1
-      rect:
-        serializedVersion: 2
-        x: 26
-        y: 5
-        width: 20
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee46a1ebe464b4130800000000000000
-      internalID: 3552010035122562286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SkinnyGattlingGun_2
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 6
-        width: 20
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b6a1932dc1ca48bb0800000000000000
-      internalID: -4934630051905201557
+      spriteID: e4d0de0b4e54b0df0800000000000000
+      internalID: -212999708846781106
       vertices: []
       indices: 
       edges: []
@@ -176,10 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SkinnyGattlingGun_0: 1113024758385402753
-      SkinnyGattlingGun_1: 3552010035122562286
-      SkinnyGattlingGun_2: -4934630051905201557
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

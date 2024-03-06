@@ -656,7 +656,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StickyNoteHeart_blue_0: -8314345349180250451
+      StickyNoteHeart_blue_1: 767579200685624925
+      StickyNoteHeart_blue_10: -8885439823688113613
+      StickyNoteHeart_blue_11: 8595768142323784143
+      StickyNoteHeart_blue_12: 7679614400491467023
+      StickyNoteHeart_blue_13: -4172705131842000028
+      StickyNoteHeart_blue_14: -6425683723055825376
+      StickyNoteHeart_blue_15: 1113841542598853114
+      StickyNoteHeart_blue_16: -3639437080041640495
+      StickyNoteHeart_blue_17: 2837023961467694840
+      StickyNoteHeart_blue_18: 6882681650696698332
+      StickyNoteHeart_blue_19: 7468143660917124236
+      StickyNoteHeart_blue_2: -8260734846006407683
+      StickyNoteHeart_blue_20: -8770809848600489733
+      StickyNoteHeart_blue_21: 6205583556618165149
+      StickyNoteHeart_blue_22: 7237863665990265932
+      StickyNoteHeart_blue_3: -4465056265241421658
+      StickyNoteHeart_blue_4: -1863958368012285259
+      StickyNoteHeart_blue_5: 2448743980466586166
+      StickyNoteHeart_blue_6: -7317985296794390162
+      StickyNoteHeart_blue_7: 7071227675437511031
+      StickyNoteHeart_blue_8: -8248029345546855608
+      StickyNoteHeart_blue_9: -2306320690437073417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
