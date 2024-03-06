@@ -1,0 +1,687 @@
+fileFormatVersion: 2
+guid: c52d080e64d51344c8e42b7a11ef6b03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6465400488855391570
+    second: StickyNoteHeart_red_0
+  - first:
+      213: 790391519676040099
+    second: StickyNoteHeart_red_1
+  - first:
+      213: 3433811828284750780
+    second: StickyNoteHeart_red_2
+  - first:
+      213: -7367295316871223774
+    second: StickyNoteHeart_red_3
+  - first:
+      213: -8690541391491218977
+    second: StickyNoteHeart_red_4
+  - first:
+      213: -1917889183688694149
+    second: StickyNoteHeart_red_5
+  - first:
+      213: -2226507142321287877
+    second: StickyNoteHeart_red_6
+  - first:
+      213: -4528880834963106549
+    second: StickyNoteHeart_red_7
+  - first:
+      213: 3627682197067034782
+    second: StickyNoteHeart_red_8
+  - first:
+      213: 5952338118479789994
+    second: StickyNoteHeart_red_9
+  - first:
+      213: 3824938111805510322
+    second: StickyNoteHeart_red_10
+  - first:
+      213: 3482173378363623898
+    second: StickyNoteHeart_red_11
+  - first:
+      213: -6634548665778079775
+    second: StickyNoteHeart_red_12
+  - first:
+      213: -6683627827348584538
+    second: StickyNoteHeart_red_13
+  - first:
+      213: -738515146156286551
+    second: StickyNoteHeart_red_14
+  - first:
+      213: -4870072738670776647
+    second: StickyNoteHeart_red_15
+  - first:
+      213: 729314256677915266
+    second: StickyNoteHeart_red_16
+  - first:
+      213: 8968279605215438988
+    second: StickyNoteHeart_red_17
+  - first:
+      213: 4720408852901109111
+    second: StickyNoteHeart_red_18
+  - first:
+      213: -7574982265061964137
+    second: StickyNoteHeart_red_19
+  - first:
+      213: -1423990235546071063
+    second: StickyNoteHeart_red_20
+  - first:
+      213: 8511201247581404702
+    second: StickyNoteHeart_red_21
+  - first:
+      213: 4349064360050700716
+    second: StickyNoteHeart_red_22
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25dccdc4d77b9b950800000000000000
+      internalID: 6465400488855391570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a385c346e808fa00800000000000000
+      internalID: 790391519676040099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb727a2aa957af20800000000000000
+      internalID: 3433811828284750780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226ed7261fb12c990800000000000000
+      internalID: -7367295316871223774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd1465e16aef46780800000000000000
+      internalID: -8690541391491218977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76eba7e2f94265e0800000000000000
+      internalID: -1917889183688694149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3dc114fc8bd911e0800000000000000
+      internalID: -2226507142321287877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 6
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0513f920ee2621c0800000000000000
+      internalID: -4528880834963106549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 4
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90703aecbd185230800000000000000
+      internalID: 3627682197067034782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 4
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf310f5bf3fa9250800000000000000
+      internalID: 5952338118479789994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 4
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b2550282f8e41530800000000000000
+      internalID: 3824938111805510322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_11
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 8
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad98faffc3a235030800000000000000
+      internalID: 3482173378363623898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_12
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 8
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7714bc3295de3a0800000000000000
+      internalID: -6634548665778079775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_13
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 8
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7c8f307ebfe33a0800000000000000
+      internalID: -6683627827348584538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_14
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 8
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9addb1c236440c5f0800000000000000
+      internalID: -738515146156286551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_15
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 8
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bee63d95a60a6cb0800000000000000
+      internalID: -4870072738670776647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_16
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 8
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a4aeec37b0f1a00800000000000000
+      internalID: 729314256677915266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_17
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c882f33f8cab57c70800000000000000
+      internalID: 8968279605215438988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 9
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d97c787d2428140800000000000000
+      internalID: 4720408852901109111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_19
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796091f83c140e690800000000000000
+      internalID: -7574982265061964137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efc6a6ec68fc3ce0800000000000000
+      internalID: -1423990235546071063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_21
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e73fdb07cdd1670800000000000000
+      internalID: 8511201247581404702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StickyNoteHeart_red_22
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 8
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1322e3efafa5c30800000000000000
+      internalID: 4349064360050700716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      StickyNoteHeart_red_0: 6465400488855391570
+      StickyNoteHeart_red_1: 790391519676040099
+      StickyNoteHeart_red_10: 3824938111805510322
+      StickyNoteHeart_red_11: 3482173378363623898
+      StickyNoteHeart_red_12: -6634548665778079775
+      StickyNoteHeart_red_13: -6683627827348584538
+      StickyNoteHeart_red_14: -738515146156286551
+      StickyNoteHeart_red_15: -4870072738670776647
+      StickyNoteHeart_red_16: 729314256677915266
+      StickyNoteHeart_red_17: 8968279605215438988
+      StickyNoteHeart_red_18: 4720408852901109111
+      StickyNoteHeart_red_19: -7574982265061964137
+      StickyNoteHeart_red_2: 3433811828284750780
+      StickyNoteHeart_red_20: -1423990235546071063
+      StickyNoteHeart_red_21: 8511201247581404702
+      StickyNoteHeart_red_22: 4349064360050700716
+      StickyNoteHeart_red_3: -7367295316871223774
+      StickyNoteHeart_red_4: -8690541391491218977
+      StickyNoteHeart_red_5: -1917889183688694149
+      StickyNoteHeart_red_6: -2226507142321287877
+      StickyNoteHeart_red_7: -4528880834963106549
+      StickyNoteHeart_red_8: 3627682197067034782
+      StickyNoteHeart_red_9: 5952338118479789994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

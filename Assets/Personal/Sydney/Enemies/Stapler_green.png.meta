@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: c188210e6941e4d498d41e6d58201fc9
+guid: 9357098b8d4c3a24a813520f2f1dc504
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2753597471096352698
-    second: Environment_0
+      213: -5287663343026420697
+    second: Stapler_green_0
+  - first:
+      213: -1699168678098776407
+    second: Stapler_green_1
+  - first:
+      213: -5742899670778698186
+    second: Stapler_green_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environment_0
+      name: Stapler_green_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 128
+        x: 9
+        y: 8
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +118,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64053e070b149c9d0800000000000000
-      internalID: -2753597471096352698
+      spriteID: 7244e0b64327e96b0800000000000000
+      internalID: -5287663343026420697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stapler_green_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 8
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aec37007175b68e0800000000000000
+      internalID: -1699168678098776407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stapler_green_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 6
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63627863d2f1d40b0800000000000000
+      internalID: -5742899670778698186
       vertices: []
       indices: 
       edges: []
@@ -129,7 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment_0: -2753597471096352698
+      Stapler_green_0: -5287663343026420697
+      Stapler_green_1: -1699168678098776407
+      Stapler_green_2: -5742899670778698186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

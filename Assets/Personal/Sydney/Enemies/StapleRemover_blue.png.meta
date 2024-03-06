@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: c188210e6941e4d498d41e6d58201fc9
+guid: 78be05ea54e8f7042828a3a45d1bdf7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2753597471096352698
-    second: Environment_0
+      213: 8594774321988630434
+    second: StapleRemover_blue_0
+  - first:
+      213: 1715159053399402567
+    second: StapleRemover_blue_1
+  - first:
+      213: -956478017726671058
+    second: StapleRemover_blue_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environment_0
+      name: StapleRemover_blue_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 128
+        x: 4
+        y: 1
+        width: 10
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +118,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64053e070b149c9d0800000000000000
-      internalID: -2753597471096352698
+      spriteID: 2a7f7c275b5c64770800000000000000
+      internalID: 8594774321988630434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StapleRemover_blue_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748aa2f52187dc710800000000000000
+      internalID: 1715159053399402567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StapleRemover_blue_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e279eed7f48e9b2f0800000000000000
+      internalID: -956478017726671058
       vertices: []
       indices: 
       edges: []
@@ -129,7 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment_0: -2753597471096352698
+      StapleRemover_blue_0: 8594774321988630434
+      StapleRemover_blue_1: 1715159053399402567
+      StapleRemover_blue_2: -956478017726671058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
