@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playground.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Playground_JayDevelop.unity
+    guid: 90b2bb12cbd48414cad4258ac408a9a7
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0e427ca5686c19e4bb52d76956ab5dd2
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

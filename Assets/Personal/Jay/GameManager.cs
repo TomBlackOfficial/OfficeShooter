@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
+    public string GamePlaySceneName;
+    public string GameOverSceneName;
+    public string MainMenuSceneName;
     public enum GameState
     {
         MainMenu,
@@ -11,11 +16,6 @@ public class GameManager : MonoBehaviour
     }
 
     public static GameManager instance;
-
-    public GameObject mainMenuUI;
-    public GameObject gameplayUI;
-    public GameObject gameOverUI;
-    public GameObject pauseMenuUI;
 
     public Text enemyDeathCountText;
 
@@ -49,11 +49,12 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SetState(GameState.Gameplay);
+        SceneManager.LoadScene(GamePlaySceneName);
     }
 
     public void GameOver()
     {
+        SceneManager.LoadScene(GameOverSceneName);
         SetState(GameState.GameOver);
         UpdateGameOverUI();
     }
@@ -66,8 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void TogglePauseMenu()
     {
-        bool isPaused = currentState == GameState.Gameplay && pauseMenuUI.activeSelf;
-        pauseMenuUI.SetActive(!isPaused);
+        bool isPaused = currentState == GameState.Gameplay && Time.timeScale == 0f;
         Time.timeScale = isPaused ? 1f : 0f; // Pause or resume time based on menu state
         SetState(isPaused ? GameState.Gameplay : GameState.MainMenu);
     }
@@ -75,15 +75,6 @@ public class GameManager : MonoBehaviour
     private void SetState(GameState newState)
     {
         currentState = newState;
-
-        mainMenuUI.SetActive(newState == GameState.MainMenu);
-        gameplayUI.SetActive(newState == GameState.Gameplay);
-        gameOverUI.SetActive(newState == GameState.GameOver);
-
-        if (newState != GameState.Gameplay)
-        {
-            pauseMenuUI.SetActive(false);
-        }
     }
 
     private void UpdateEnemyDeathCountText()
@@ -97,5 +88,6 @@ public class GameManager : MonoBehaviour
     private void UpdateGameOverUI()
     {
         UpdateEnemyDeathCountText();
+        // Add additional game over UI updates here if needed
     }
 }
