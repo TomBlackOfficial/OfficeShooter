@@ -141,8 +141,14 @@ public class PlayerController : Damageable
         }
     }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+        if (INSTANCE != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         INSTANCE = this;
 
         rb = GetComponent<Rigidbody2D>();

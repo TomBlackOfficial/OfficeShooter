@@ -32,14 +32,15 @@ public class Damageable : MonoBehaviour
 
     protected virtual void Die()
     {
-        if (deathVFX != null)
+        if (gameObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
+            if (deathVFX != null)
+            {
+                GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
+                Destroy(vfx, 1f);
+            }
+            LootPoolManager.INSTANCE.CreateLoot(transform.position);
         }
-        if (lootDrop != null)
-        {
-            GameObject loot = Instantiate(lootDrop, transform.position, Quaternion.identity);
-        } 
         dead = true;
     }
 
