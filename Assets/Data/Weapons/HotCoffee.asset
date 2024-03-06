@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a83b116157525d141bdbf97294433f07, type: 3}
-  m_Name: StapleGun
+  m_Name: HotCoffee
   m_EditorClassIdentifier: 
-  weaponSprite: {fileID: 21300000, guid: 886b83fefa96ccd4e850455a919e095e, type: 3}
-  projectileData: {fileID: 11400000, guid: dc80943349aa5004c965b3aead6bb18d, type: 2}
-  fireRate: 10
-  overrideDamage: 1
-  damage: 10
+  weaponSprite: {fileID: 4930440604519549133, guid: 58e0b339f9a34214895ca4288da4f4c5, type: 3}
+  projectileData: {fileID: 0}
+  fireRate: 20
+  overrideDamage: 0
+  damage: 1

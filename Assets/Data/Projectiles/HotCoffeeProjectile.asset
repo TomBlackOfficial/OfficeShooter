@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 988609dc43c219f49a3431db254dfa82, type: 3}
-  m_Name: Heart
+  m_Script: {fileID: 11500000, guid: 38fb1237d3459d44b981ebdd8e457fce, type: 3}
+  m_Name: HotCoffeeProjectile
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 21300000, guid: 7bdc236ae5bd67f4186c8898f6528bbf, type: 3}
-  rotateOnSpawn: 0
-  weaponDrop: 0
-  weaponData: {fileID: 0}
-  healthDrop: 1
-  healAmount: 2
+  projectileSprite: {fileID: 21300000, guid: 9913c8aa3d9ceb044913ff15379c6a00, type: 3}
+  projectileSpeed: 3.57
+  projectileRange: 3.31
+  projectileDamage: 1

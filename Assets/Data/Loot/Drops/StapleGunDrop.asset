@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988609dc43c219f49a3431db254dfa82, type: 3}
   m_Name: StapleGunDrop
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 21300000, guid: dcd97e2d40dd23e43ac0556c45c04f05, type: 3}
+  lootSprite: {fileID: 21300000, guid: 0de40abfb13990649bfb77e513e26c95, type: 3}
   rotateOnSpawn: 1
   weaponDrop: 1
   weaponData: {fileID: 11400000, guid: e6a159ee77c10c847b423adef9fd8bd8, type: 2}
