@@ -6,6 +6,7 @@ using UnityEngine;
 public class LootData : ScriptableObject
 {
     public Sprite lootSprite;
+    public bool rotateOnSpawn = true;
     public bool weaponDrop;
     public WeaponData weaponData;
     public bool healthDrop;

@@ -35,10 +35,17 @@ public class LootDropScript : MonoBehaviour
     private void OnEnable()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-        _direction = new Vector2(Random.Range(0f, 1f), Random.Range(0f, 1f));
+        _direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         _force = Random.Range(_minMaxInitialForce.x, _minMaxInitialForce.y);
-        _rotation = Random.Range(_minMaxInitialRotationSpeed.x, _minMaxInitialRotationSpeed.y);
-        _rotateClockwise = (Random.Range(0, 2) == 0);
+        if (_myLootData.rotateOnSpawn)
+        {
+            _rotation = Random.Range(_minMaxInitialRotationSpeed.x, _minMaxInitialRotationSpeed.y);
+            _rotateClockwise = (Random.Range(0, 2) == 0);
+        }
+        else
+        {
+            _spriteGameObject.transform.rotation.SetEulerAngles(0, 0, 0);
+        }
         if (_myLootData != null)
         {
             if (_spriteRenderer != null)
@@ -51,18 +58,27 @@ public class LootDropScript : MonoBehaviour
 
     private void Update()
     {
+        if (_spriteRenderer != null)
+        {
+            if (_spriteRenderer.sprite != _myLootData.lootSprite)
+            {
+                _spriteRenderer.sprite = _myLootData.lootSprite;
+            }
+        }
         if (_force > 0)
         {
-            Vector3 newPosition = _spriteGameObject.transform.position + (new Vector3(_direction.x, _direction.y, 0) * _force * Time.deltaTime);
-            _spriteGameObject.transform.position = newPosition;
-            _force = Mathf.Lerp(_force, 0, _slowRotationFactor);
-            if (_force < 0.00001f)
+            Vector3 newPosition = transform.position + (new Vector3(_direction.x, _direction.y, 0) * _force * Time.deltaTime);
+            transform.position = newPosition;
+            _force = Mathf.Lerp(_force, 0, _slowForceFactor);
+            if (_force < 0.0001f)
             {
                 _force = 0f;
             }
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            _spriteGameObject.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
 
-        if (_rotation > 0)
+        if (_rotation > 0 && _myLootData.rotateOnSpawn)
         {
             float rotation = _rotation;
             if (_rotateClockwise)
@@ -70,7 +86,7 @@ public class LootDropScript : MonoBehaviour
                 rotation *= -1;
             }
             _spriteGameObject.transform.Rotate(Vector3.forward, rotation);
-            _rotation = Mathf.Lerp(_rotation, 0, _slowForceFactor);
+            _rotation = Mathf.Lerp(_rotation, 0, _slowRotationFactor);
             if (_rotation < 0.005f)
             {
                 _rotation = 0f;
